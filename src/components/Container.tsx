@@ -8,7 +8,7 @@ const Container = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className={cn("max-w-450 mx-auto px-4 sm:px-6 lg:px-8", className)}>
+    <div className={cn("max-w-450 h-auto mx-auto px-4 sm:px-6 lg:px-8", className)}>
       {children}
     </div>
   );
