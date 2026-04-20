@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 const ProfileBio = () => {
   return (
     <div className='mt-6'>
@@ -29,7 +30,7 @@ const ProfileBio = () => {
             <h1>threads.link</h1>
         </div>
         <div className='flex items-center justify-center mt-4 gap-2'>
-            <Button className='w-40'>Edit Profile</Button>
+            <Link href={"/profile/editprofile"}><Button className='w-40'>Edit Profile</Button></Link>
             <Button className='w-40'>Share Profile</Button>
         </div>
     </div>
