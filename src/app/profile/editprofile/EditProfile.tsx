@@ -4,25 +4,35 @@ import React from "react";
 type EditItemType = {
   id: number;
   item: string;
+  des : string
 };
 const EditProfile = () => {
   const editItems: EditItemType[] = [
-    { id: 0, item: "name" },
+    { id: 0, item: "Name", des : "mahfujurrahman" },
     {
       id: 1,
-      item: "username",
+      item: "Username",
+      des : "mahfujurrahman"
     },
     {
       id: 2,
-      item: "pronoun",
+      item: "Pronoun",
+      des : ""
+    },
+    {
+        id : 3,
+        item : "Bio",
+        des : "mahfujurrahman"
     },
     {
       id: 4,
-      item: "addLinks",
+      item: "AddLinks",
+      des : ""
     },
     {
       id: 5,
-      item: "banner",
+      item: "Banner",
+      des : ""
     },
   ];
   return (
@@ -35,7 +45,8 @@ const EditProfile = () => {
               <label htmlFor="" className="text-xs text-gray-500">
                 {i.item}
               </label>
-              <p className="text-sm">Mahfujur Rahman</p>
+              <p className="text-sm">{i.des}        
+              </p>
             </div>
           </div></Link>
         </div>

@@ -11,13 +11,13 @@ const MobileBottomMenu = () => {
           <House />
         </Link>
         <Link href={"/"}>
-          <Search />
-        </Link>
-        <Link href={"/"}>
           <Play />
         </Link>
         <Link href={"/"}>
           <Send />
+        </Link>
+        <Link href={"/"}>
+          <Search />
         </Link>
         <Link href={"/profile"} className="w-12 rounded-full  ">
           <Image
