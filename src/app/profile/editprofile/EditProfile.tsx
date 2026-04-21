@@ -1,3 +1,5 @@
+"use client"
+import { useUser } from "@/contexts/UserContext";
 import Link from "next/link";
 import React from "react";
 
@@ -7,12 +9,14 @@ type EditItemType = {
   des : string
 };
 const EditProfile = () => {
+  const {user} = useUser()
+  console.log(typeof user)
   const editItems: EditItemType[] = [
-    { id: 0, item: "Name", des : "mahfujurrahman" },
+    { id: 0, item: "Name", des : `${user?.name}` },
     {
       id: 1,
       item: "Username",
-      des : "mahfujurrahman"
+      des : `${user?.username}`
     },
     {
       id: 2,
@@ -22,7 +26,7 @@ const EditProfile = () => {
     {
         id : 3,
         item : "Bio",
-        des : "mahfujurrahman"
+        des : `${user?.bio}`
     },
     {
       id: 4,
@@ -35,6 +39,7 @@ const EditProfile = () => {
       des : ""
     },
   ];
+  
   return (
     <div>
       {editItems.map((i) => (

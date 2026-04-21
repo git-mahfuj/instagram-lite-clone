@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import EditProfile from "./EditProfile";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const EditProfilepage = () => {
   return (
@@ -14,6 +15,7 @@ const EditProfilepage = () => {
           <MoveLeft size={30} />
         </Link>{" "}
         <h1>Edit Profile</h1>
+        <ModeToggle />
       </span>
 
       <div className="mt-6 flex flex-col gap-6">
