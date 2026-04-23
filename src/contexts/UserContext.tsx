@@ -10,7 +10,7 @@ type UserType = {
     file?: File;
     url: string;
   };
-  profileLinks?: [];
+  profileLinks?: []
 };
 
 type UserContextType = {
@@ -32,6 +32,8 @@ const UserProvider = ({ children }: { children: React.ReactNode }) => {
       username: "username",
       bio: "userbio",
       profileImage: { url: "" },
+      profileLinks:[],
+      
     };
   });
 
@@ -40,7 +42,6 @@ const UserProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem("user_data", JSON.stringify(user));
     }
   }, [user]);
-
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
