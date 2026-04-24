@@ -7,7 +7,7 @@ const ProfileTop = () => {
   const {user} = useUser()
   return (
     <div className='flex items-center justify-between mt-2'>
-     <Link href={'/profile/post'}><Plus size={30}/></Link>
+     <Link href={'/profile/createpost'}><Plus size={30}/></Link>
      <h1>{user?.username}</h1>
       <Menu size={30} />
     </div>

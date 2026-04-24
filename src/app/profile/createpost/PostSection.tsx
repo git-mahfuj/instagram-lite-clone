@@ -6,6 +6,7 @@ import { useUser } from "@/contexts/UserContext";
 import { PostType, usePost } from "@/contexts/PostContext";
 import PostTop from "./PostTop";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const PostSection = () => {
   const [selectedImages, setSelectedImages] = useState<string[]>([]);
@@ -26,6 +27,8 @@ const PostSection = () => {
   const { AddItem } = usePost();
   const [text, setText] = useState<string>("");
 
+  const router = useRouter()
+
   const handlePostSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newPost: PostType = {
@@ -38,6 +41,7 @@ const PostSection = () => {
     };
     AddItem(newPost);
     console.log("post", newPost);
+    router.push("/profile")
   };
   return (
     <form onSubmit={handlePostSubmit}>
@@ -49,13 +53,11 @@ const PostSection = () => {
           <p className="text-sm">{user?.name}</p>
           <button type="submit">
             {" "}
-            <Link href={"/profile"}>
-              <p className="text-sm text-blue-600">Done</p>
-            </Link>
+            <p className="text-sm text-blue-600">Done</p>
           </button>
         </div>
       </div>
-      <div className="bg-white max-w-sm w-full min-h-screen p-4">
+      <div className=" max-w-sm w-full min-h-screen p-4">
         <div>
           {/* Text Input */}
           <textarea

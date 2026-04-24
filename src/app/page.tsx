@@ -14,7 +14,6 @@ export default function Home() {
         <StoryNavBar/>
       <div className="mt-4">
           <Homecontainer />
-        <ModeToggle />
       </div>
       </Container>
       <MobileBottomMenu />
