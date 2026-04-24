@@ -9,14 +9,16 @@ import { ModeToggle } from "@/components/mode-toggle";
 const EditProfilepage = () => {
   return (
     <Container>
-      <span className="flex items-center gap-5 pt-2">
+      <div className="flex justify-between items-center mt-3">
+        <span className="">
         <Link href={"/profile"}>
           {" "}
           <MoveLeft size={30} />
         </Link>{" "}
+      </span>
         <h1>Edit Profile</h1>
         <ModeToggle />
-      </span>
+      </div>
 
       <div className="mt-6 flex flex-col gap-6">
         <EditProfilePic />

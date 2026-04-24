@@ -8,7 +8,7 @@ import { useUser } from "@/contexts/UserContext";
 const MobileBottomMenu = () => {
   const { user } = useUser();
   return (
-    <div className="bg-white dark:bg-black bottom-0 fixed border border-t w-full py-4 md:hidden ">
+    <div className="bg-white dark:bg-black bottom-0 z-99 fixed border border-t w-full py-4 md:hidden ">
       <div className="flex justify-around items-center gap-11 px-5">
         <Link href={"/"}>
           <House />
@@ -26,9 +26,9 @@ const MobileBottomMenu = () => {
           <Image
             src={user?.profileImage?.url as string}
             alt=""
-            height={10}
-            width={30}
-            className="aspect-square object-cover rounded-full bg-black dark:bg-white"
+            height={20}
+            width={40}
+            className="aspect-square w-[30px] object-cover rounded-full bg-black dark:bg-white"
           ></Image>
         </Link>
       </div>
